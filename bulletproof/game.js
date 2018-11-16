@@ -77,6 +77,7 @@
         });
         playerCollider();
         ballCollider();
+        checkReload();
     }
 
 
@@ -334,7 +335,8 @@
         'rightPressed': false,
         'leftPressed': false,
         'downPressed': false,
-        'upPressed': false
+        'upPressed': false,
+        'r': false
     }
 
     var player = {
@@ -432,7 +434,7 @@
                 i.dy = -i.dy;
             }
             ctx.beginPath();
-            ctx.fillStyle = "#a0e8c4";
+            ctx.fillStyle = "#3f915f";
             ctx.arc(this.x, this.y, 10, 0, Math.PI * 2);
             ctx.fill();
             ctx.closePath();
@@ -671,7 +673,7 @@
 		createText("In 3 minutes and 10 seconds you: ", canvas.width / 2 - 49, halfconstant + 75, "18px x", btconst);
 		createText("Survived a total of: ", canvas.width / 2 -10, halfconstant + 125, "18px x", btconst);
 		createText(es + " easy enemies", canvas.width / 2 - 4, halfconstant + 145, "18px x", "#ffa3a3");
-		createText(ms + " medium enemies", canvas.width / 2  - 12, halfconstant + 165, "18px x", "#a0e8c4");
+		createText(ms + " medium enemies", canvas.width / 2  - 12, halfconstant + 165, "18px x", "#3f915f");
 		createText(hs + " hard enemies", canvas.width / 2 - 4, halfconstant + 185, "18px x", "#4a8cf7");
 		createText(is + " insane enemies", canvas.width / 2 - 5, halfconstant + 205, "18px x", "#7e5f84");
 
@@ -712,7 +714,11 @@
         }
     }
 
-
+    function checkReload() {
+        if(cursor.r) {
+            document.location.reload();
+        }
+    }
 
     function pushEasy() {
         easyPlayers.push(easy({x: returnRandom(0, canvas.width - 11),y: returnRandom(0, canvas.height - 11)}));
@@ -787,6 +793,8 @@
             cursor.upPressed = true;
         } else if (e.keyCode == 40) {
             cursor.downPressed = true;
+        } else if(e.keyCode ==  82) {
+            cursor.r = true;
         }
     }
 
@@ -801,6 +809,8 @@
             cursor.upPressed = false;
         } else if (e.keyCode == 40) {
             cursor.downPressed = false;
+        } else if(e.keyCode == 82) {
+            cursor.r = true;
         }
     }
 
