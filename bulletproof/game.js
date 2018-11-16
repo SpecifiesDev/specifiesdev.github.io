@@ -3,7 +3,7 @@
     var canvas = document.getElementById("canv");
     var ctx = canvas.getContext("2d");
     ctx.canvas.width = window.innerWidth - 50;
-    ctx.canvas.height = window.innerHeight - 20;
+    ctx.canvas.height = window.innerHeight - 75;
 
     document.onkeydown = keyDownHandler;
     document.onkeyup = keyUpHandler;
