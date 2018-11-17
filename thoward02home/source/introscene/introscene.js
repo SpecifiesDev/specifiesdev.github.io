@@ -16,6 +16,6 @@ function SetUpScene(){
 function StartModelLoad(){
 
   //Call to models.js to load a model from a like
-  LoadModels("http://localhost:8080");
+  LoadModels("https://192.168.254.64:8080/model.fbx");
 
 }
