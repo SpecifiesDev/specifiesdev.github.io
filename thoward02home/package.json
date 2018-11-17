@@ -1,0 +1,19 @@
+{
+  "name": "home",
+  "version": "0.0.1",
+  "description": "The Virtual Home For Us",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    ".": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thoward02/home"
+  },
+  "author": "Thoward02",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^3.0.9"
+  }
+}
