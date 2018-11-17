@@ -31,3 +31,5 @@ http.createServer((request, response) => {
   });
 }).listen(8080, '0.0.0.0');
 console.log("Server started on port 8080");
+// Start server with node (file)
+// All that needs to be done is to add an extra header to the get, that specifies the file, then the server pushes the file back with the ACAO headers.
