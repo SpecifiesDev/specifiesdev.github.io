@@ -4,3 +4,6 @@ function Error(et) {
 function Warn(et) {
 	console.warn(et);
 }
+function Log(et) {
+	console.log(et);
+}
