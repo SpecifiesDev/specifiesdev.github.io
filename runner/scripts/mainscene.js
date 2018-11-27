@@ -11,7 +11,7 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 var renderer = new THREE.WebGLRenderer({alpha:true});
 
 // set the size of the screen, we may edit this later to match with the padding of our main site design
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth - 30, window.innerHeight - 30);
 
 // add shadow cap
 renderer.shadowMap.enabled = true;
