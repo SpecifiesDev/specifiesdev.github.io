@@ -49,7 +49,10 @@ function setup() {
 	sun.shadow.mapSize.height = 256;
 	sun.shadow.camera.near = 0.5;
 	sun.shadow.camera.far = 50 ;
+
+	getOC(camera, renderer);
 }
+
 // this callback is :thumb:
 var animate = function animate() {
 	requestAnimationFrame(animate);

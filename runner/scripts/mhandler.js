@@ -30,3 +30,12 @@ function getSun() {
 
 	return sun;
 }
+function getOC(c, r) {
+	orbitControl = new THREE.OrbitControls( camera, renderer.domElement );//helper to rotate around in scene
+	orbitControl.addEventListener( 'change', render );
+	//orbitControl.enableDamping = true;
+	//orbitControl.dampingFactor = 0.8;
+	orbitControl.enableZoom = false;
+
+	
+}
