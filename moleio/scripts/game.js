@@ -19,7 +19,7 @@
 
 	var loadedLevel = [];
 
-	var speed = 8;
+	var speed = 11;
 
 
 
@@ -235,9 +235,19 @@
     			player.y -= speed;
     			player.dy = 4;
     			player.dx = -2;
+
+                var limit = 600;
+                var l1Limit = 49 * 35;
+                var swi = l1Limit - player.x > 35;
+                if(level1) {
+                    if(swi) {
+                        moveCamera(10, 0);
+                    }
+                }
+
     		}
     	}
-        else if (cursor.rightPressed && player.x < canvas.width - 10) {
+        else if (cursor.rightPressed && player.x < 49 * 35 - 10) {
             player.x += speed + 3;
                 var tXI = tX;
 
@@ -256,6 +266,14 @@
         } 
         else if (cursor.leftPressed && player.x > 10) {
             player.x -= speed;
+            var limit = 600;
+            var l1Limit = 49 * 35;
+            var swi = player.x > 35;
+            if(level1) {
+                if(swi) {
+                    moveCamera(10, 0);
+                }
+            }
         } 
         else if (cursor.upPressed && player.y > 10) {
         	upKey.push("up");
