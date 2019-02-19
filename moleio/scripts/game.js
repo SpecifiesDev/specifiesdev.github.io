@@ -9,8 +9,8 @@
 	document.onkeydown = keyDownHandler;
 	document.onkeyup = keyUpHandler;
 
-	var tX = 0;
-	var tY = 1;
+	var tX = -(window.innerWidth - 11);
+	var tY = 830;
 	
 	var testGrass = grass({x: 0, y: 818});
 
@@ -35,6 +35,10 @@
    	var upandLeft = [];
 
 	function update() {
+
+        
+        tX = (window.innerWidth - player.x);
+        
 		
 		move();
 		if(inAir(player)) {
@@ -99,9 +103,10 @@
 
 	// 2dc doesn't have a camera object, so we create a function to translate the canvas and undraw objects < 500px
 	function moveCamera(x, y) {
+        tY += y;
+        tX += x;
 		ctx.translate(x, y)
-		tY += y;
-		tX += x;
+
 	}
  
     function keyDownHandler(e) {
@@ -198,21 +203,26 @@
     }
     function move() {
     	// smoother movement mechanics
-    	if (cursor.rightPressed && cursor.upPressed && player.x < canvas.width - 10 && player.y > 10){
+    	if (cursor.rightPressed && cursor.upPressed && player.x < 49 * 35 - 10 && player.y > 10){
     		upandRight.push("uar");
     		if(upandRight.length < 10) {
     			player.x += speed;
     			player.y -= speed;
     			player.dy = 4;
     			player.dx = 2;
-    			var tYI = -tY;
-    			console.log(tYI);
-    			var l1Limit = 36 * 35;
-    			console.log(l1Limit);
+
+    			var tXI = tX;
+
+    			var l1Limit = 49 * 35;
+
     			if(level1) {
-    				var isTrue = tYI == l1Limit;
-    				if(!isTrue) {
-    					moveCamera(-3, 0);
+                    console.log("Player X: " + player.x);
+                    console.log(l1Limit - player.x);
+
+                    var swi = l1Limit - player.x < 1050;
+                    console.log("switch: " + swi);
+    				if(!swi) {
+    					moveCamera(-10, 0);
     				}
     			}
 
@@ -228,7 +238,21 @@
     		}
     	}
         else if (cursor.rightPressed && player.x < canvas.width - 10) {
-            player.x += speed;
+            player.x += speed + 3;
+                var tXI = tX;
+
+                var l1Limit = 49 * 35;
+
+                if(level1) {
+                    console.log("Player X: " + player.x);
+                    console.log(l1Limit - player.x);
+
+                    var swi = l1Limit - player.x < 1170;
+                    console.log("switch: " + swi);
+                    if(!swi) {
+                        moveCamera(-10, 0);
+                    }
+                }
         } 
         else if (cursor.leftPressed && player.x > 10) {
             player.x -= speed;
