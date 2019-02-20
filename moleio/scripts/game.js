@@ -46,6 +46,10 @@
 
     var coinv = 0;
 
+    var constantX = 0;
+
+    var collidedCoins = [];
+
     function update() {
 
 
@@ -63,6 +67,10 @@
         bullets.forEach(function(e) {
 
             e.x -= e.dx;
+
+            if (bulletCollides(player, e)) {
+                die();
+            }
 
         });
 
@@ -99,7 +107,7 @@
         }
 
         loadedLevel.forEach(function(e) {
-            if (e.type == "grass" || e.type == "rock" || e.type == "gun" || e.type == "bottom" || e.type == "coin") {
+            if (e.type == "grass" || e.type == "rock" || e.type == "gun" || e.type == "bottom" || e.type == "coin" || e.type == "lava") {
                 regularObjects.push(e);
             }
             e.draw();
@@ -113,7 +121,7 @@
             }
         });
 
-        drawCoin();
+
     }
 
     var cursor = {
@@ -176,7 +184,15 @@
                             y: e.y,
                             type: "sky"
                         }));
-                        coinv += 1;
+                        if (!collidedCoins.includes(e.x)) {
+                            coinv += 1;
+                            collidedCoins.push(e.x);
+                        }
+                    }
+                }
+                if (e.type == "lava") {
+                    if (collides(player, e)) {
+                        die();
                     }
                 }
             });
@@ -188,7 +204,7 @@
     function playerHorizontalCollision() {
         var breakv = false;
         if (!inAir(player)) {
-            console.log(player.y);
+
             if (player.y <= 830) {
                 regularObjects.forEach(function(e) {
                     if (e.type == "grass" || e.type == "gun" || e.type == "rock" || e.type == "bottom") {
@@ -209,7 +225,15 @@
                                 y: e.y,
                                 type: "sky"
                             }));
-                            coinv += 1;
+                            if (!collidedCoins.includes(e.x)) {
+                                coinv += 1;
+                                collidedCoins.push(e.x);
+                            }
+                        }
+                    }
+                    if (e.type == "lava") {
+                        if (collides(player, e)) {
+                            die();
                         }
                     }
                 });
@@ -226,14 +250,24 @@
             a.y + 10 > b.y
     }
 
+    function bulletCollides(a, b) {
+        return a.x < b.x + 5 && a.x + 10 > b.x && a.y < b.y + 5 && a.y + 10 > b.y;
+    }
+
     // 2dc doesn't have a camera object, so we create a function to translate the canvas and undraw objects < 500px
     function moveCamera(x, y) {
         tY += y;
         tX += x;
         ctx.translate(x, y)
         var toCreate = coins.x + x;
-        console.log(toCreate);
         coin.x = toCreate;
+        constantX += -x;
+    }
+
+    function die() {
+        player.x = 11;
+        player.y = 830;
+        moveCamera(constantX, 0);
 
     }
 
@@ -360,6 +394,17 @@
         return i;
     }
 
+    function lava(i) {
+        var lavaImage = new Image(5, 5);
+        lavaImage.src = "./resources/lava.jpg";
+        var w = 35;
+        var h = 35;
+        i.draw = function() {
+            ctx.drawImage(lavaImage, i.x, i.y, w, h);
+        }
+        return i;
+    }
+
     function loadLevel(toLoad) {
         loadedLevel = [];
         for (var c = 0; c < toLoad.cols; c++) {
@@ -369,7 +414,7 @@
                     loadedLevel.push(grass({
                         x: c * 35,
                         y: r * 35,
-                        type: "grass"
+                        type: "grass",
                     }));
                 }
                 if (tile == 0) {
@@ -418,6 +463,13 @@
                         type: "coin"
                     }));
                 }
+                if (tile == 7) {
+                    loadedLevel.push(lava({
+                        x: c * 35,
+                        y: r * 35,
+                        type: "lava"
+                    }));
+                }
             }
         }
     }
@@ -440,7 +492,7 @@
 
     function move() {
         // smoother movement mechanics
-        if (cursor.rightPressed && cursor.upPressed && player.x < 100 * 35 - 10 && player.y > 10) {
+        if (cursor.rightPressed && cursor.upPressed && player.x < 200 * 35 - 10 && player.y > 10) {
             upandRight.push("uar");
             if (upandRight.length < 10) {
 
@@ -448,11 +500,11 @@
                     player.x += speed;
                     player.y -= speed;
                     player.dy = 4;
-                    player.dx = 2;
+                    player.dx = 3;
 
                     var tXI = tX;
 
-                    var l1Limit = 1000 * 35;
+                    var l1Limit = 200 * 35;
 
                     if (level1) {
 
@@ -470,10 +522,10 @@
                 player.x -= speed;
                 player.y -= speed;
                 player.dy = 4;
-                player.dx = -2;
+                player.dx = -3;
 
                 var limit = 600;
-                var l1Limit = 49 * 35;
+                var l1Limit = 200 * 35;
                 var swi = player.x > 35;
                 if (level1) {
                     if (swi) {
@@ -482,13 +534,13 @@
                 }
 
             }
-        } else if (cursor.rightPressed && player.x < 100 * 35 - 10) {
-            console.log(playerHorizontalCollision());
+        } else if (cursor.rightPressed && player.x < 200 * 35 - 10) {
+
             if (!playerHorizontalCollision()) {
                 player.x += speed + 3;
                 var tXI = tX;
 
-                var l1Limit = 100 * 35;
+                var l1Limit = 200 * 35;
 
                 if (level1) {
                     var swi = l1Limit - player.x < 1000;
@@ -501,7 +553,7 @@
         } else if (cursor.leftPressed && player.x > 10) {
             player.x -= speed + 3;
             var limit = 600;
-            var l1Limit = 49 * 35;
+            var l1Limit = 200 * 35;
             var swi = player.x > 800;
             if (level1) {
                 if (swi) {
