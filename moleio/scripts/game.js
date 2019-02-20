@@ -20,7 +20,9 @@
 
     var loadedLevel = [];
 
-    var speed = 11;
+    var speed = 9;
+
+    var yspeed = 12;
 
 
 
@@ -50,11 +52,19 @@
 
     var collidedCoins = [];
 
+    var winObjects = [];
+
     function update() {
 
+        winObjects.forEach(function(e) {
+            if(collides(player, e)) {
+                clearInterval(startGame);
+                win();
+            }
+        });
 
         seconds = Math.floor((Date.now() - start) / 1000);
-        if (seconds % 5 == 0) {
+        if (seconds % 15 == 0) {
             gunObjects.forEach(function(e) {
                 bullets.push(bullet({
                     x: e.x - 10,
@@ -98,7 +108,7 @@
     }
 
     function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, 200 * 35, canvas.height);
 
         if (level1 && !l1s) {
             loadLevel(l1);
@@ -109,6 +119,9 @@
         loadedLevel.forEach(function(e) {
             if (e.type == "grass" || e.type == "rock" || e.type == "gun" || e.type == "bottom" || e.type == "coin" || e.type == "lava") {
                 regularObjects.push(e);
+            }
+            if(e.type == "win") {
+                winObjects.push(e);
             }
             e.draw();
         });
@@ -271,6 +284,14 @@
 
     }
 
+    function win() {
+        console.log("You win!!!");
+        console.log("You collected a total of: " + coinv + " coins.");
+        console.log("I got lazy with this function, so just reload to play again.. Doubt you will.");
+        ctx.clearRect(0, 0, 200 * 35, canvas.height);
+        console.log("hi");
+    }
+
     function keyDownHandler(e) {
         e.preventDefault();
         if (e.keyCode == 39) {
@@ -383,6 +404,18 @@
         return i;
     }
 
+    function winb(i) {
+        var w = 35;
+        var h = 35;
+        i.draw = function() {
+            ctx.beginPath();
+            ctx.fillStyle = "#32db7b";
+            ctx.fillRect(i.x, i.y, w, h);
+            ctx.closePath();
+        }
+        return i;
+    }
+
     function coin(i) {
         var coinImage = new Image(5, 5);
         coinImage.src = "./resources/coin.png";
@@ -470,6 +503,9 @@
                         type: "lava"
                     }));
                 }
+                if(tile == 8) {
+                    loadedLevel.push(winb({x: c * 35, y: r * 35, type: "win"}));
+                }
             }
         }
     }
@@ -498,7 +534,7 @@
 
                 if (!playerHorizontalCollision()) {
                     player.x += speed;
-                    player.y -= speed;
+                    player.y -= yspeed;
                     player.dy = 4;
                     player.dx = 3;
 
@@ -520,7 +556,7 @@
             upandLeft.push("ual");
             if (upandLeft.length < 10) {
                 player.x -= speed;
-                player.y -= speed;
+                player.y -= yspeed;
                 player.dy = 4;
                 player.dx = -3;
 
@@ -563,7 +599,7 @@
         } else if (cursor.upPressed && player.y > 10) {
             upKey.push("up");
             if (upKey.length < 10) {
-                player.y -= speed;
+                player.y -= yspeed;
                 player.dy = 4;
             }
         }
