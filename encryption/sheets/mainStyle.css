@@ -1,0 +1,50 @@
+    #footer {
+    	position: absolute;
+    	right: 0;
+    	bottom: 0;
+    	left: 0;
+    	padding: 1 rem;
+    	background-color: #3a3a3a;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    	text-align: center;
+    }
+    #copyright {
+    	position: absolute;
+    	bottom: 8px;
+    	left: 95%;
+    	color: #b5b6b7;
+    	font-size: 10px;
+    }
+    #github {
+    	position: absolute;
+    	bottom: 20px;
+    	left: 55%;
+    }
+    #information {
+    	position: absolute;
+    	bottom: 20px;
+    	left: 42.5%;
+    }
+    #box {
+        width: 90%;
+        background-color: #6da3f9; /* Inner box */
+        margin: 50px;
+        padding-top: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding-bottom: 20px;
+    }
+	body {
+  	  background-color: #3870c9; /* outer box */
+  	  color: #75787c; /* Text color */
+    }
+    .ip, .ih {
+    	text-align: center;
+    	font-size: 25px;
+    }
+    .title {
+    	text-align: center;
+    }
+    .inputB {
+        position: absolute;
+        left: 42.5%;
+    }
