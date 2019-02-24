@@ -1,11 +1,5 @@
-	canvas {
-		background: #d5dae2;
-		display: block;
-		margin: 0 auto;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	}
     #footer {
-    	position: absolute;
+    	position: fixed;
     	right: 0;
     	bottom: 0;
     	left: 0;
@@ -31,7 +25,29 @@
     	bottom: 20px;
     	left: 42.5%;
     }
+    #box {
+        width: 90%;
+        background-color: #6da3f9; /* Inner box */
+        margin: 50px;
+        padding-top: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding-bottom: 20px;
+    }
+    #finalOutput {
+        padding-top: 20px;
+    }
 	body {
-  	  background-color: rgb(84, 160, 201);
-  	  color: #383838;
+  	  background-color: #3870c9; /* outer box */
+  	  color: #75787c; /* Text color */
+    }
+    .ip, .ih {
+    	text-align: center;
+    	font-size: 25px;
+    }
+    .title {
+    	text-align: center;
+    }
+    .inputB {
+        position: absolute;
+        left: 42.5%;
     }
