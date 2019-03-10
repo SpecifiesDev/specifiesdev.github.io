@@ -18,7 +18,7 @@
     var seconds = 0;
     var start = Date.now();
 
-    //bounce = new sound("./resources/bounce.mp3");
+    bounce = new sound("blank");
 
     var changes = 0;
     var difference = 0;
