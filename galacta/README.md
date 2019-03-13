@@ -4,6 +4,11 @@ A new world.
 <br>
 <br>
 [Demo](https://specifiesdev.github.io/galacta/index)
+
+<br>
+<b> Username: cqb5 </b>
+<br>
+<i> Password: misandryisokay </i>
 <br>
 <br>
 <br>
