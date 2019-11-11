@@ -9,8 +9,12 @@ canvas {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transform: translateX(-50%) translateY(-50%);
     left: 50%;
-    top: 42%;
+    top: 44%;
     position: absolute;
+}
+
+[type="checkbox"] {
+    vertical-align: middle;
 }
 
 .navbar-github {
@@ -18,5 +22,12 @@ canvas {
     left: 50%;
     position: absolute;
     border-radius: 50%;
+}
+
+.checkbox-control {
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    position: absolute;
+    top: 50px;
 }
 
