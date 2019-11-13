@@ -1,0 +1,22 @@
+body {
+    color: #fff;
+    background: #204d5e;
+}
+
+
+.nav-control {
+    background-color: #3a3a3a;
+}
+
+.profile-control {
+    border-radius: 50%;
+}
+
+.navbar-github {
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+
