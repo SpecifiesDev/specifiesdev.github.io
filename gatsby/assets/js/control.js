@@ -1,4 +1,5 @@
-import { setData } from './loadImageAssets';
+import { setData } from "https://specifiesdev.github.io/lib.js";
+
 
 $(() => {
 
@@ -6,14 +7,8 @@ $(() => {
         window.open("https://github.com/SpecifiesDev");
     });
 
+    
 
-    if(sessionStorage.path == null || "") {
-        
-        dataControl.setData();
-        console.log(sessionStorage.path);
-    } else {
-
-    }
 
     
 });
