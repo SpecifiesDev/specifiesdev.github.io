@@ -1,5 +1,8 @@
 export function setData() {
-    let paths = ["./assets/images/profile.jpg", "./assets/images/profile1.jpg"];
+
+    let preformat = "https://specifiesdev.github.io/assets/images/";
+
+    let paths = [`${preformat}profile.jpg`, `${preformat}profile1.jpg`];
     sessionStorage.path = paths[Math.floor(Math.random() * paths.length)];
 }
 
