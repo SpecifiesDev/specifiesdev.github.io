@@ -11,9 +11,11 @@ $(() => {
     // Check and make sure session storage has the path value
     if(sessionStorage.path == null || "") {
         setData().then(() => {
+            console.log(sessionStorage.path);
             $(".profile-control").attr("src", sessionStorage.path); 
         });
     } else {
+        console.log(`Already : ${sessionStorage.path}`);
         $(".profile-control").attr("src", sessionStorage.path); 
     }
     
