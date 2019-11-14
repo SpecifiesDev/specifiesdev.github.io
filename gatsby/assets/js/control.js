@@ -15,7 +15,7 @@ $(() => {
     } 
     console.log(sessionStorage.path);
     $(".profile-control").attr("src", sessionStorage.path);
-    $(".profile-control").show();
+    $(".profile-control").attr("visibility", "visible");
 
     
 });
