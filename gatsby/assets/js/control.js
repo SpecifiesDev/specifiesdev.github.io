@@ -1,4 +1,4 @@
-import { setData, callback } from "https://specifiesdev.github.io/gatsby/assets/js/lib.js";
+import { setData } from "https://specifiesdev.github.io/gatsby/assets/js/lib.js";
 
 // on ready, begin
 $(() => {
