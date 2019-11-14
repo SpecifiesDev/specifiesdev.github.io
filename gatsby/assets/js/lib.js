@@ -23,7 +23,7 @@ export function setData() {
  * @param {string} type - The file extension.
  * @param {int} maxRange - The max range of the loop. For example, 5 would add profile.type-profile4.type
  * @param {string} format - A preformatted string of the website path for short handing.
- * @param {Array} array - The array to push the paths too for selection.
+ * @param {Array} array - The array to push the paths to for selection.
  */
 function loop(type, maxRange, format, array) {
     for(let i = 0; i < maxRange; i++) {

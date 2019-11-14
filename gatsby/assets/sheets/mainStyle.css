@@ -10,6 +10,7 @@ body {
 
 .profile-control {
     border-radius: 50%;
+    visibility: hidden;
 }
 
 .navbar-github {
