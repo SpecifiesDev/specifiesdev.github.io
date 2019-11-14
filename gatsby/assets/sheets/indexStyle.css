@@ -13,6 +13,7 @@ header {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
+    left: 665px;
     width: auto;
     height: auto;
     z-index: 0;
@@ -36,4 +37,18 @@ header {
     background-color: black;
     opacity: 0.5;
     z-index: 1;
+  }
+
+  body {
+      padding-bottom: 75px;
+  }
+
+
+
+  .body-text {
+      color: #b5b6b7;
+  }
+
+  .center-text {
+      text-align: center;
   }
