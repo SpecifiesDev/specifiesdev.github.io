@@ -9,7 +9,7 @@ export function setData() {
         if(i == 0) {
             paths.push(`${preformat}profile.jpg`);
         } else {
-            paths.push(`${preformat}profile${x}.jpg`);
+            paths.push(`${preformat}profile${i}.jpg`);
         }
         console.log("Push");
     }
