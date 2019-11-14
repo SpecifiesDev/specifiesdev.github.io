@@ -1,4 +1,4 @@
-import { setData } from "https://specifiesdev.github.io/gatsby/assets/js/lib.js";
+import { setData, callback } from "https://specifiesdev.github.io/gatsby/assets/js/lib.js";
 
 // on ready, begin
 $(() => {
@@ -10,10 +10,14 @@ $(() => {
 
     // Check and make sure session storage has the path value
     if(sessionStorage.path == null || "") {
-        setData();
+        setData().then(() => {
+            $(".profile-control").attr("src", sessionStorage.path); 
+        });
+    } else {
+        $(".profile-control").attr("src", sessionStorage.path); 
     }
-    $(".profile-control").attr("src", sessionStorage.path); 
-
+    
+    
 
     
 });
