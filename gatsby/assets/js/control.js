@@ -1,5 +1,8 @@
 import { setData } from "https://specifiesdev.github.io/gatsby/assets/js/lib.js";
 
+// Perform before document loads just for visual preference
+checkSession();
+
 // on ready, begin
 $(() => {
 
@@ -8,13 +11,16 @@ $(() => {
         window.open("https://github.com/SpecifiesDev");
     });
 
-    // Check and make sure session storage has the path value
+
+
+    
+});
+
+
+function checkSession() {
     if(sessionStorage.path == null || "") {
         setData();
     } 
     console.log(sessionStorage.path);
     $(".profile-control").attr("src", sessionStorage.path);    
-    
-
-    
-});
+}
