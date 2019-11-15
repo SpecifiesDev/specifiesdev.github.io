@@ -55,7 +55,7 @@ header {
 
   @media (pointer: coarse) and (hover: none) {
     header {
-      background: url('https://specifiesdev.github.io/assets/images/phone.jpg') black no-repeat center center scroll;
+      background: url('https://specifiesdev.github.io/gatsby/assets/images/phone.jpg') black no-repeat center center scroll;
     }
     header video {
       display: none;
