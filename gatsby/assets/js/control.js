@@ -17,7 +17,7 @@ $(() => {
     $(".profile-control").attr("src", sessionStorage.path);
     $(".profile-control").attr("style", "visibility: visible;");
 
-    $(".overlay").attr("style", `width: ${window.innerWidth}`);
+    $(".video-control").attr("style", `width: ${window.innerWidth}`);
 });
 
 
