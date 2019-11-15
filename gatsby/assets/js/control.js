@@ -17,8 +17,7 @@ $(() => {
     $(".profile-control").attr("src", sessionStorage.path);
     $(".profile-control").attr("style", "visibility: visible;");
 
-    // Set the width to window variables, so that the video matches every resolution (in theory)
-    $(".video-control").attr("style", `width: ${window.innerWidth}`);
+    $(".overlay").attr("style", `width: ${window.innerWidth}`);
 });
 
 

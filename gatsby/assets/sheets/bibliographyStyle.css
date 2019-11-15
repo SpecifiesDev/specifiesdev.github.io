@@ -1,3 +1,11 @@
+a, a:hover, a:visited {
+    color: #b5b6b7;
+}
+
+body {
+    padding-bottom: 75px;
+}
+
 .body-text {
     color: #b5b6b7;
 }
@@ -10,8 +18,9 @@
     font-size: 30px;
 }
 
-.heading {
-    font-size: 24px;
+.annotation {
+    font-size: 16px;
+    padding-left: 60px;
 }
 
 .citation {

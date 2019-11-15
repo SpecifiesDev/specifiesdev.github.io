@@ -5,7 +5,7 @@ export function setData() {
     let paths = [];
 
     
-    loop(".jpg", 4, preformat, paths);
+    loop(".jpg", 7, preformat, paths);
 
     let path = paths[Math.floor(Math.random() * paths.length)];
 
