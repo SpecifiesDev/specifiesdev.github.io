@@ -54,14 +54,7 @@ header {
   }
 
   @media (pointer: coarse) and (hover: none) {
-    header {
-      background: url('https://specifiesdev.github.io/gatsby/assets/images/phone.jpg') black no-repeat center center scroll;
-    }
     header video {
       display: none;
-    }
-    .center-text {
-        text-align: center;
-        font-size: 28px;
     }
   }
