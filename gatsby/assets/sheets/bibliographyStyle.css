@@ -1,10 +1,14 @@
-a, a:hover, a:visited {
-    color: #b5b6b7;
-}
+
 
 body {
     padding-bottom: 75px;
 }
+
+
+.local, .local:hover, .local:visited {
+    color: #b5b6b7;
+}
+
 
 .body-text {
     color: #b5b6b7;
