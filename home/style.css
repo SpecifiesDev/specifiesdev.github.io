@@ -1,0 +1,139 @@
+body {
+    color: #fff;
+    background: #204d5e;
+    overflow-x: hidden;
+}
+
+
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper canvas{
+    position: absolute;
+}
+.wrapper .over-canvas {
+    position: relative;
+}
+
+.canvas-no-touch {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0px;
+		opacity: 1
+	}
+}
+
+@keyframes animatetop {
+    from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0px;
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes animateleft {
+    from {
+        left: -1000px;
+        opacity: 0
+    }
+    to {
+        left: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animateleft {
+    from {
+		left: -1000px;
+		opacity: 0
+	}
+	to {
+		left: 0px;
+		opacity: 1
+	}
+}
+
+
+@-webkit-keyframes animateright {
+    from {
+        right: -1000px;
+        opacity: 0
+    }
+    to {
+        right: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animateright {
+    from {
+		right: -1000px;
+		opacity: 0
+	}
+	to {
+		right: 0px;
+		opacity: 1
+	}
+}
+
+
+
+.header-canvas {
+    display: none;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 2.5s;
+	animation-name: animatetop;
+	animation-duration: 2.5s;
+}
+.secondary-canvas {
+    display: none;
+    -webkit-animation-name: animateleft;
+    -webkit-animation-duration: 2s;
+    animation-name: animateleft;
+    animation-duration: 2s;
+}
+
+.animate1, .heart-left {
+    display: none;
+    -webkit-animation-name: animateleft;
+    -webkit-animation-duration: 1s;
+    animation-name: animateleft;
+    animation-duration: 1s;
+}
+
+.animate2 {
+    display: none;
+    -webkit-animation-name: animateright;
+    -webkit-animation-duration: 1s;
+    animation-name: animateright;
+    animation-duration: 1s;
+}
+
+.heart-right {
+    display: none;
+    -webkit-animation-name: animateright;
+    -webkit-animation-duration: 1.1s;
+    animation-name: animateright;
+    animation-duration: 1.1s;
+}

