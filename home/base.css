@@ -1,0 +1,39 @@
+body {
+    color: #fff;
+    background: #204d5e;
+}
+
+
+.nav-control {
+    background-color: #3a3a3a;
+}
+
+.profile-control {
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.navbar-github {
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.top-control {
+    background-color: #267694;
+}
+.bottom-control {
+    background-color: #204d5e;
+}
+
+.center-text {
+    text-align: center;
+}
+
+
+

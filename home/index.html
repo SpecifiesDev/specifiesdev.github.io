@@ -12,6 +12,7 @@
         <!--  Stylesheets. Bootstrap & Local -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
         <link rel="stylesheet" href = "./style.css">
 
         <!-- Jquery and some more Bootstrap dependencies -->
@@ -31,39 +32,54 @@
 
 
     <body>
-        <div class = "wrapper">
-            <canvas style = "background-color: black;" id = "overlay">
-            </canvas>
-            
-            
-            <div class="container h-100 canvas-no-touch">
-                <div class="d-flex h-100 text-center align-items-center">
-                    <div class="w-100 text-white">
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <h1 class="display-3 over-canvas header-canvas">Hi, I speak nerd.</h1>
-                        <p class="lead mb-0 over-canvas secondary-canvas">No seriously, I'm a programmer.</p>
-                        <br>
-                        <p class="lead mb-0 over-canvas">
+            <div class = "wrapper">
+                <canvas style = "background-color: black;" id = "overlay">
+                </canvas>
+                
+                
+                <div class="container h-100 canvas-no-touch">
+                    <div class="d-flex h-100 text-center align-items-center">
+                        <div class="w-100 text-white">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h1 class="display-3 over-canvas header-canvas">Hi, I speak nerd.</h1>
+                            <p class="lead mb-0 over-canvas secondary-canvas">No seriously, I'm a programmer.</p>
+                            <br>
+                            <p class="lead mb-0 over-canvas">
+                                
+                                <span class = "over-canvas heart-left">❤️ </span>
+                                <span class = "over-canvas animate1">Click one of the buttons to find out more</span>
+                                <span class = "over-canvas heart-right"> ❤️ </span>
+    
+    
+                            </p>
                             
-                            <span class = "over-canvas heart-left">❤️ </span>
-                            <span class = "over-canvas animate1">Keep scrolling to find out more</span>
-                            <span class = "over-canvas heart-right"> ❤️ </span>
-
-
-                        </p>
-
-
-                        <i class="fas fa-camera-retro"></i>
+                            <br>
+                            <br>
+                            <br>
+                            <div class = "buttons over-canvas">
+                                <a href = "about.html">
+                                    <button type="button" class="btn btn-light">About</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+    
+    
+                
+    
+    
             </div>
-            
+        
 
 
-        </div>
+
+
+
+
         <script>
             let canv = document.getElementById("overlay");
             canv.width = window.innerWidth;

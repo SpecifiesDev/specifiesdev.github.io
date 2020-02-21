@@ -15,6 +15,10 @@ $(() => {
                     $(".heart-left").show();
                     $(".heart-right").show();
 
+                    setTimeout(() => {
+                        $(".buttons").show();
+                    }, 2000);
+
                 }, 1000);
 
 

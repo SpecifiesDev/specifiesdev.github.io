@@ -30,6 +30,24 @@ body {
     display: none;
 }
 
+@-webkit-keyframes opac {
+    from {
+        opacity: 0
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
 @-webkit-keyframes animatetop {
 	from {
 		top: -300px;
@@ -136,4 +154,12 @@ body {
     -webkit-animation-duration: 1.1s;
     animation-name: animateright;
     animation-duration: 1.1s;
+}
+
+.buttons {
+    display: none;
+    -webkit-animation-name: opac;
+    -webkit-animation-duration: 2s;
+    animation-name: opac;
+    animation-duration: 2s
 }
