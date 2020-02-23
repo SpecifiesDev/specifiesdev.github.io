@@ -1,0 +1,17 @@
+com.herocraftonline.heroes
+com.herocraftonline.heroes.api
+com.herocraftonline.heroes.api.events
+com.herocraftonline.heroes.characters
+com.herocraftonline.heroes.characters.classes
+com.herocraftonline.heroes.characters.effects
+com.herocraftonline.heroes.characters.effects.common
+com.herocraftonline.heroes.characters.party
+com.herocraftonline.heroes.characters.skill
+com.herocraftonline.heroes.characters.skill.skills
+com.herocraftonline.heroes.command
+com.herocraftonline.heroes.command.commands
+com.herocraftonline.heroes.gui
+com.herocraftonline.heroes.listeners
+com.herocraftonline.heroes.storage
+com.herocraftonline.heroes.storage.managers
+com.herocraftonline.heroes.util
