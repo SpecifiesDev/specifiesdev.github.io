@@ -16,7 +16,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         
-
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         
     </head>
 
@@ -64,13 +64,28 @@
                 </div>
                 <div style = "height: 200px"></div>
 
+                <h1 class = "font-weight-bold header-control">Education</h1>
                 <div class = "row">
                     <img src = "https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" height = 500 style = "float: right;"/>
                     <p class = "font-italic information-left">In terms of Education, I graduated high school in May of 2020. I am going to a local college until I finish out my associates degree, which should be completed around the end of the Spring 2021 semester. Once I complete my associates, I will transfer into a college known for engineering and comp sci graduates and pursue a bachelor's in Computer Science. Past that, I hope to gear my degree towards a research field, preferably quantum computing. I will not be posting specific names and locations here due to the fact that a lot of my work is done for clients located across the country, and the world. If you're in need of this information, you may email me using the contact method, and I will get back to you.</p>
                 </div>
                 <div style = "height: 200px"></div>
                 <div class = "row">
-                    <p class = "font-italic">Over the years I have messed with a wide range of languages and frameworks.</p>
+                    <p class = "font-italic">Over the years I have messed with a variety of languages and frameworks. The notable languages that I have dabbled with are labeled below with an organized bar graph to outline how skilled I am at them. Note that while verbose languages like SQL are not listed, I still use them as most of my development work is in backend systems.</p>
+                    <canvas id = "chart"></canvas>
+                    <p class = "font-italic">For libraries / frameworks, I will start with Java. Most of my Java development was done in connection to Spigot, an open source API designed to allow developers to create add-ons to the close sourced game Minecraft. Through this Development I've used libraries like HikariCP to pool SQL connections, JSON libraries for web integration, and used my knowledge of networking to create a web hook like system to allow data to emit across specified channels.
+                      For front-end web development I've used popular responsive design frameworks like bootstrap to create web pages. While I've come a long way in terms of front-end design, I could come much further. I've used React in adjacency to bootstrap to create 
+                      responsive web pages in an efficient work flow. I've used Electron to integrate web pages into a desktop application. I've also used React Native to design mobile applications. While a lot of my initial effort in web development was in front-end systems,
+                      I quickly moved to backend development using node.js. The most notable node framework I've used, and continue to use, is express.js. Express has taught me integral design techniques, especially when it comes to developing APIs.
+                      Through express I build my backend applications with one thing in mind: portability. The server serves data that any modern language can parse, and manipulate,
+                      thus making the platforms endless. Express has also taught me basic cyber security practices such as never raw storing sensitive data, establishing a line of encryption,
+                      and securing your source. I've also used mongoose to integrate with an Atlas MongoDB server, sql libraries, and discord.js to create discord bots for various tasks.
+                    </p>
+                    <p class = "font-italic">
+                      In terms of python, I've primarily used it for scripting and machine learning. Most of my machine learning was just me dabbling in the area and learning core matematical concepts like linear regression and stochastic gradient descent to reduce cost functions. The most complex ML 
+                      project I've ever created was one that web filtered and learned bypasses, but it was just a learning project. I've never professionally developed anything with ML. I used C# in a few game development projects, but really only rate myself at the level I do because the syntax is very 
+                      close to Java. I'm trying to get into C++ as I feel it's important to learn low level languages, but still prefer using high level languages for professional development environments.
+                    </p>
                 </div>
             </div>
           </div>
@@ -83,7 +98,7 @@
          </footer>
 
          
-         
+        <script src = "./main.js"></script>
     </body>
 
 
