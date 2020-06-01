@@ -1,5 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
-    background: url('https://images.unsplash.com/photo-1564403848767-9db2a39c65aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=780&q=80') no-repeat center center fixed;
+    background: url('https://images.unsplash.com/photo-1526296796659-ab6b1b701491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

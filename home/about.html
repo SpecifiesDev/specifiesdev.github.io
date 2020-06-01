@@ -1,106 +1,261 @@
 <!DOCTYPE html>
-
 <html>
-
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <link rel = "stylesheet" href="./base.css">
-
-        <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-        
-    </head>
-
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
-        <div class="container">
-          <a class="navbar-brand" href="#">SpecifiesDev</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      
-      <!-- Page Content -->
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel = "stylesheet" href="./base.css">
+      <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+   </head>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
       <div class="container">
-        <div class="card border-0 shadow my-5">
-          <div class="card-body p-5">
-            <h1 class="font-weight-light">A portfolio for the likes of regular people.</h1>
-            <p class="lead">You may either scroll down or use the navigation bar to navigate this page.</p>
-            <div style="height: 700px"></div>
-
-
-            <div class = "container">
-                <h1 class = "font-weight-bold header-control">About Me</h1>
-                <div class = "row">
-                    <p class = "font-italic information-right">Hi, I'm Austin. I am an 18 year old programmer from Georgia. I started getting involved in programming around the age of twelve or thirteen. A popular kids game called Minecraft caught my interest, and lead me into the field. Most of my time spent programming has been on backend systems, primarily with Java. With that being said, I have spent the last two years heavily focusing on learning javascript and common JS libraries in an effort to increase my front-end development skills.</p>
-                    <img src = "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" style = "float: right;"/>
-                </div>
-                <div style = "height: 200px"></div>
-
-                <h1 class = "font-weight-bold header-control">Education</h1>
-                <div class = "row">
-                    <img src = "https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" height = 500 style = "float: right;"/>
-                    <p class = "font-italic information-left">In terms of Education, I graduated high school in May of 2020. I am going to a local college until I finish out my associates degree, which should be completed around the end of the Spring 2021 semester. Once I complete my associates, I will transfer into a college known for engineering and comp sci graduates and pursue a bachelor's in Computer Science. Past that, I hope to gear my degree towards a research field, preferably quantum computing. I will not be posting specific names and locations here due to the fact that a lot of my work is done for clients located across the country, and the world. If you're in need of this information, you may email me using the contact method, and I will get back to you.</p>
-                </div>
-                <div style = "height: 200px"></div>
-                <div class = "row">
-                    <p class = "font-italic">Over the years I have messed with a variety of languages and frameworks. The notable languages that I have dabbled with are labeled below with an organized bar graph to outline how skilled I am at them. Note that while verbose languages like SQL are not listed, I still use them as most of my development work is in backend systems.</p>
-                    <canvas id = "chart"></canvas>
-                    <p class = "font-italic">For libraries / frameworks, I will start with Java. Most of my Java development was done in connection to Spigot, an open source API designed to allow developers to create add-ons to the close sourced game Minecraft. Through this Development I've used libraries like HikariCP to pool SQL connections, JSON libraries for web integration, and used my knowledge of networking to create a web hook like system to allow data to emit across specified channels.
-                      For front-end web development I've used popular responsive design frameworks like bootstrap to create web pages. While I've come a long way in terms of front-end design, I could come much further. I've used React in adjacency to bootstrap to create 
-                      responsive web pages in an efficient work flow. I've used Electron to integrate web pages into a desktop application. I've also used React Native to design mobile applications. While a lot of my initial effort in web development was in front-end systems,
-                      I quickly moved to backend development using node.js. The most notable node framework I've used, and continue to use, is express.js. Express has taught me integral design techniques, especially when it comes to developing APIs.
-                      Through express I build my backend applications with one thing in mind: portability. The server serves data that any modern language can parse, and manipulate,
-                      thus making the platforms endless. Express has also taught me basic cyber security practices such as never raw storing sensitive data, establishing a line of encryption,
-                      and securing your source. I've also used mongoose to integrate with an Atlas MongoDB server, sql libraries, and discord.js to create discord bots for various tasks.
-                    </p>
-                    <p class = "font-italic">
-                      In terms of python, I've primarily used it for scripting and machine learning. Most of my machine learning was just me dabbling in the area and learning core matematical concepts like linear regression and stochastic gradient descent to reduce cost functions. The most complex ML 
-                      project I've ever created was one that web filtered and learned bypasses, but it was just a learning project. I've never professionally developed anything with ML. I used C# in a few game development projects, but really only rate myself at the level I do because the syntax is very 
-                      close to Java. I'm trying to get into C++ as I feel it's important to learn low level languages, but still prefer using high level languages for professional development environments.
-                    </p>
-                </div>
-            </div>
-          </div>
-        </div>
+         <a class="navbar-brand" href="#">SpecifiesDev</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="#about">About Me</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#education">Education</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#skills">Skills</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#portfolio">Portfolio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+               </li>
+            </ul>
+         </div>
       </div>
-
-
-        <footer id="sticky-footer" class="navbar fixed-bottom py-4 bg-dark text-white-50">
-            <a href = "https://github.com/SpecifiesDev" target = "_blank"><img src = "https://specifiesdev.github.io/classes/american/gatsby/assets/images/github.jpg" width = "25" height = "25" class = "navbar-github"></img></a>
-         </footer>
-
-         
-        <script src = "./main.js"></script>
-    </body>
-
-
-
+   </nav>
+   <!-- Page Content -->
+   <div class="container">
+   <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+         <h1 class="font-weight-light">A portfolio for the likes of regular people.</h1>
+         <p class="lead">You may either scroll down or use the navigation bar to navigate this page.</p>
+         <div style="height: 700px"></div>
+         <div class = "container">
+            <h1 class = "font-weight-bold header-control" id = "about">About Me</h1>
+            <div class = "row">
+               <p class = "font-italic information-right">Hi, I'm Austin. I am an 18 year old programmer from Georgia. I started getting involved in programming around the age of twelve or thirteen. A popular kids game called Minecraft caught my interest, and lead me into the field. Most of my time spent programming has been on backend systems, primarily with Java. With that being said, I have spent the last two years heavily focusing on learning javascript and common JS libraries in an effort to increase my front-end development skills.</p>
+               <img src = "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" style = "float: right;"/>
+            </div>
+            <div style = "height: 200px"></div>
+            <h1 class = "font-weight-bold header-control" id = "education">Education</h1>
+            <div class = "row">
+               <img src = "https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" height = 500 style = "float: right;"/>
+               <p class = "font-italic information-left">In terms of Education, I graduated high school in May of 2020. I am going to a local college until I finish out my associates degree, which should be completed around the end of the Spring 2021 semester. Once I complete my associates, I will transfer into a college known for engineering and comp sci graduates and pursue a bachelor's in Computer Science. Past that, I hope to gear my degree towards a research field, preferably quantum computing. I will not be posting specific names and locations here due to the fact that a lot of my work is done for clients located across the country, and the world. If you're in need of this information, you may email me using the contact method, and I will get back to you.</p>
+            </div>
+            <div style = "height: 200px"></div>
+            <h1 class = "font-weight-bold header-control" id = "skills">Skills</h1>
+            <div class = "row">
+               <p class = "font-italic">Over the years I have messed with a variety of languages and frameworks. The notable languages that I have dabbled with are labeled below with an organized bar graph to outline how skilled I am at them. Note that while verbose languages like SQL are not listed, I still use them as most of my development work is in backend systems.</p>
+               <canvas id = "chart"></canvas>
+               <p class = "font-italic">For libraries / frameworks, I will start with Java. Most of my Java development was done in connection to Spigot, an open source API designed to allow developers to create add-ons to the close sourced game Minecraft. Through this Development I've used libraries like HikariCP to pool SQL connections, JSON libraries for web integration, and used my knowledge of networking to create a web hook like system to allow data to emit across specified channels.
+                  For front-end web development I've used popular responsive design frameworks like bootstrap to create web pages. While I've come a long way in terms of front-end design, I could come much further. I've used React in adjacency to bootstrap to create 
+                  responsive web pages in an efficient work flow. I've used Electron to integrate web pages into a desktop application. I've also used React Native to design mobile applications. While a lot of my initial effort in web development was in front-end systems,
+                  I quickly moved to backend development using node.js. The most notable node framework I've used, and continue to use, is express.js. Express has taught me integral design techniques, especially when it comes to developing APIs.
+                  Through express I build my backend applications with one thing in mind: portability. The server serves data that any modern language can parse, and manipulate,
+                  thus making the platforms endless. Express has also taught me basic cyber security practices such as never raw storing sensitive data, establishing a line of encryption,
+                  and securing your source. I've also used mongoose to integrate with an Atlas MongoDB server, sql libraries, and discord.js to create discord bots for various tasks.
+               </p>
+               <p class = "font-italic">
+                  In terms of python, I've primarily used it for scripting and machine learning. Most of my machine learning was just me dabbling in the area and learning core matematical concepts like linear regression and stochastic gradient descent to reduce cost functions. The most complex ML 
+                  project I've ever created was one that web filtered and learned bypasses, but it was just a learning project. I've never professionally developed anything with ML. I used C# in a few game development projects, but really only rate myself at the level I do because the syntax is very 
+                  close to Java. I'm trying to get into C++ as I feel it's important to learn low level languages, but still prefer using high level languages for professional development environments.
+               </p>
+               <p class ="font-italic">In terms of real world work, the only relevant position I've held was a student worker position in my school system's IT department. While a lot of my duties involved physical tasks, I did get heavily involved during the networking side of everything towards the end of the job.</p>
+            </div>
+            <div style = "height: 500px"></div>
+            <h1 class = "font-weight-bold header-control" id = "portfolio">Portfolio</h1>
+            <div class="card-deck">
+               <div class="card">
+                  <img class="card-img-top" src="http://jacksonconnect.site/Assets/Logo.png" height = 250>
+                  <div class="card-body">
+                     <h5 class="card-title">Jackson Connect</h5>
+                     <p class="card-text">Jackson Connect is a platform designed to connect communities together.</p>
+                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#jconnect">Information</button>
+                  </div>
+               </div>
+               <div class="card">
+                  <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/61Y-nEZ6C%2BL._SL1500_.jpg">
+                  <div class="card-body">
+                     <h5 class="card-title">Bulletproof</h5>
+                     <p class="card-text">Bulletproof was my first real major web development project.</p>
+                     <button type = "button" class = "btn btn-info btn-lg" data-toggle="modal" data-target="#bproof">Information</button>
+                  </div>
+               </div>
+               <div class="card">
+                  <img class="card-img-top" src="data:image/jpeg;base64,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">
+                  <div class="card-body">
+                     <h5 class="card-title">Spigot Plugins</h5>
+                     <p class="card-text">A group of information on my experience with Spigot, and links to public source.</p>
+                     <button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#spigot">Information</button>
+                  </div>
+               </div>
+            </div>
+            <div style = "height: 50px"></div>
+            <div class="card-deck">
+               <div class = "card">
+                  <img class = "card-img-top" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWkAAACMCAMAAACJW6j5AAAAaVBMVEX////LODfLNjXLMjHNPTz89PTWbGz139/KNDPQTUzJLSz++fnlnp7wzc3HJSTwycj56enSW1vjoaDSU1Lprq7PRkXfjo3KMC756urbd3fsv7/MJiT24uL12trptLTUYmHgiYndf3/NQkFpLcfVAAADBklEQVR4nO3d0VLiQBBG4SSAkIiCYoDdjaC+/0NuTc0d3VQNzuRn455zaXWY4TNiqoJS1aSpuvcG/puQVoW0KqRVIa0KaVVIq0JaFdKqkFaFtCqkVSGtCmlVSKtCWhXSqlzppnQ/ZY2MvbjSzbx0dummnuIaqSVKN6vTsCzZsO/MIod90SWWw1ttqGfnsmsk97RbpUnPnqqyrZ/NIt1r4TU2jvRD4TVSO74grWmLtCikVSGtCmlVSKtCWhXSqpBWhbQqpFUhrQppVUirQloV0qqQVjWC9GPCV6pM6cQ1sqQT10g7dAzpdb+7rD15cxnSm9au8eHNZUgPZolde3bmtme7mZ1DXV56/zy77PnNmcuR/u2s8cuZy5FeHswaXe/MDV9m8NBppO0976649MEeW1zavkNj1jpzQ2/mmhXSo0gbwWaGNNKTlravHkiPI805jXQMaaRjSIeQDiGN9FjSXOVxTseQRjqGdAjpENJIIz11aa7yOKdjSCMdQzqEdAhppJGeujRXeZzTMaSRjiEdQjqENNJIT12aqzzO6RjSSMeQDiEdkkh35r+GIj2O9Ly/bP7pzCEdypFevNu2zhxXeaF//a+ZOadvCekQ0kjHkL4lpENIIx3jKu+WOKdDSCMdQ/qWkA4hjXQM6VviKi/0c6Q5p5GOIY10rLR0+iecbR6TuiJt5/L+r2larnTise/Osa0zt3R+IzYLOzckStdN36b1ZRaum6+0ufQ7tombsQh1M098Hr1jUHuDHpY7Zzdz5dNVV2k5j+ce68zd8C6EsnvJOtbDSn3Ae31icM47a6YZ0qqQVoW0KqRVIa0KaVVIq0JaFdKqkFaFtCqkVSGtCmlVSKuqVubDvcqXdSfAkW4Umy5cV708jJ9z5+mwPqZ1mlno+Vmw6cLtq+Ni/F7tHdumf0mrdb5Ln4I9ly7xRzizzR/vFeDb9/i6vWbbE8yTzgjpqyGtCmlVSKtCWhXSqpBWhbQqpFUhrQppVUirQloV0qqQVoW0KqRVbe1fVmZJn+79hL7TX4ORBbZhHL3PAAAAAElFTkSuQmCC">
+                  <div class = "card-body">
+                     <h5 class = "card-title">npm packages</h5>
+                     <p class = "card-text">A list of packages I have deployed to the npm platform.</p>
+                     <button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#npm">Information</button>
+                  </div>
+               </div>
+               <div class = "card">
+                  <img class = "card-img-top" src = "https://mms.businesswire.com/media/20180305005830/en/546575/23/STATS.jpg">
+                  <div class = "card-body">
+                     <h5 class = "card-title">Mineplex Stats API</h5>
+                     <p class = "card-text">An API that uses web parsing techniques to parse statistics for the Minecraft server Mineplex.</p>
+                     <button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#mp-stats">Information</button>
+                  </div>
+               </div>
+            </div>
+            <div style = "height: 300px"></div>
+            <h1 class = "font-weight-bold header-control" id = "contact">Contact</h1>
+            <p class = "font-italic">For the time being, until I deploy this on a GCP server, you may contact me via direct email: specifiesdev@gmail.com</p>
+         </div>
+      </div>
+   </div>
+   <div id="jconnect" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <h6>Jackson Connect</h6>
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <h6>Description</h6>
+               <p class ="font-italic">Jackson Connect is a platform designed to connect communities with organizations that need help. It allows organizations to create posts, modify them, and set activity levels. It allows users, with complete anonymity, to submit contact information to the organization. It was co-developed by three Developers. Most of the work I did was backend endpoints, authentication, and data storage. I also wrote the initial framework for the react-native application.</p>
+               <h6>Languages / Frameworks</h6>
+               <p class = "font-italic">&#10003; Javascript </p>
+               <p class = "font-italic">&#10003; SQL </p>
+               <p class = "font-italic">&#10003; React Native</p>
+               <h6>Live?</h6>
+               <p class = "font-italic">&#10003;</p>
+               <h6>Links</h6>
+               <a href = "https://jacksonconnect.site/" target="_blank">Website</a>
+               <br>
+               <a href = "https://play.google.com/store/apps/details?id=site.jacksonconnect.android" target="_blank">Android App</a>
+               <br>
+               <a href = "#">IOS App (TBD)</a>
+               <br>
+               <a href = "https://github.com/SpecifiesDev/JC-Frontend" target="_blank">Public Frontend Repository</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id = "bproof" class = "modal fade" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <h6>Bulletproof</h6>
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <h6>Description</h6>
+               <p class ="font-italic">Bulletproof was my first real web development project, and is the proejct where I forced myself into learning Javascript. I'm showcasing it as it can easily be used as a comparison to my newer projects to show how far I have come since. A lot of the programming was sloppy as I was simply trying to learn core concepts of Javascript. The project also contains a "machine learning" section that uses a rather inefficient method of looping through object positions and calculating movement choices based on the closest objects.</p>
+               <h6>Languages / Frameworks</h6>
+               <p class = "font-italic">&#10003; Javascript </p>
+               <h6>Live?</h6>
+               <p class = "font-italic">&#10003;</p>
+               <h6>Notes</h6>
+               <p>I didn't take basic mathematics into account when making the movement mechanics, and due to that the player actually ends up moving faster than intended when moving in a diagonal direction. </p>
+               <h6>Links</h6>
+               <a href = "https://specifiesdev.github.io/bulletproof/main" target="_blank">Playable game</a>
+               <br>
+               <a href = "https://specifiesdev.github.io/bulletproof/game.js" target="_blank">Game.js file</a>
+               <br>
+               <a href = "https://specifiesdev.github.io/bulletproof/ai.js">AI.js file</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id = "spigot" class = "modal fade" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <h6>Spigot</h6>
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <h6>Description</h6>
+               <p class ="font-italic">Due to the nature of how mc Development environments typically operate a lot of source I've written is private. This is here to showcase my public source.</p>
+               <h6>Languages / Frameworks</h6>
+               <p class = "font-italic">&#10003; Java / SpigotAPI </p>
+               <h6>Notes</h6>
+               <p class = "font-italic">Anything linked below are my public spigot plugins which, at the time of writing this, I still plan to support development for. My github page (located in the footer) has multiple public repositories of discontinued, or private plugins.</p>
+               <h6>Links</h6>
+               <a href = "https://www.spigotmc.org/resources/playerstatistics.78160/" target="_blank">PlayerStatistics Plugin</a>
+               <br>
+               <a href = "https://github.com/SpecifiesDev/DeluxeTabs/" target="_blank">Rewritten DeluxeTabs</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id = "npm" class = "modal fade" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <h6>NPM packages</h6>
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <h6>Description</h6>
+               <p class ="font-italic">A list of active packages I have deployed to the NPM platform.</p>
+               <h6>Languages / Frameworks</h6>
+               <p class = "font-italic">&#10003; node.js </p>
+               <h6>Async sqlite3 - </h6>
+               <a href = "https://github.com/SpecifiesDev/async-sqlite3" target = "_blank">Repository</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id = "mp-stats" class = "modal fade" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <h6>Mineplex Stats API</h6>
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <h6>Live?</h6>
+               <p class = "font-italic">&#10003;</p>
+               <h6>Description</h6>
+               <p class ="font-italic">A few years ago Mineplex had a public API but removed it for unknown reasons. I primarily developed this API and deployed it for a discord bot to be able to quickly display stats. While the discord bot was discontinued due to the fact that the one already out there improved I, alongside other devs, use the API in order to parse player data. For example, a bot I created has a command that sets the level of a joined user by taking the given name and querying the API for xp, and level.</p>
+               <h6>Languages / Frameworks</h6>
+               <p class = "font-italic">&#10003; node.js </p>
+               <h6>How?</h6>
+               <p class = "font-italic">While I don't want to be entirely specific on how every part was done, I had to work around the fact that the site doesn't want headless browsers or any non user agent applications to query their site. I had to effectively emulate a user visiting the web page.</p>
+               <h6>Links</h6>
+               <a href = "http://35.231.191.182/api/v1/tests/build1?user=JeAtteint" target = "_blank">Test Stats Build</a>
+               <br>
+               <a href = "http://35.231.191.182/api/v1/stats/player/JeAtteint" target = "_blank">Endpoint to Query Global stats</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer id="sticky-footer" class="navbar fixed-bottom py-4 bg-dark text-white-50">
+      <a href = "https://github.com/SpecifiesDev" target = "_blank"><img src = "https://specifiesdev.github.io/classes/american/gatsby/assets/images/github.jpg" width = "25" height = "25" class = "navbar-github"></img></a>
+   </footer>
+   <script src = "./main.js"></script>
+   </body>
 </html>
