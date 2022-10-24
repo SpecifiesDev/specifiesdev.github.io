@@ -11,6 +11,13 @@ $(document).ready(function(){
             });
         });
     });
+
+    let mobileTest = isMobile();
+
+    if(mobileTest) {
+        $(".fluency").show();
+        $(".projects").show();
+    }
     
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
