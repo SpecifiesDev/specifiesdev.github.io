@@ -12,12 +12,8 @@ $(document).ready(function(){
         });
     });
 
-    let mobileTest = isMobile();
-
-    if(mobileTest) {
-        $(".fluency").show();
-        $(".projects").show();
-    }
+    let fluencyTrig = false;
+    let projectTrig = false;
     
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
@@ -25,20 +21,23 @@ $(document).ready(function(){
         let fluency = $(".fluency");
         let projects = $(".projects");
 
-        let mobile = isMobile();
+       
 
-        if(scroll_pos >= 500 && !mobile) {
+        if(scroll_pos >= 500 && !fluencyTrig) {
             fluency.animate({
                 scale: '100%'
             },
             1000);
+            fluencyTrig = true;
         }
 
-        if(scroll_pos >= 1600 && !mobile) {
+        if(scroll_pos >= 1600 && !projectTrig) {
 
             projects.animate({
                 scale: '100%'
             }, 1000);
+
+            projectTrig = true;
 
         }
 
