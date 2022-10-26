@@ -9,6 +9,7 @@ body {
     margin: 0px;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    
 }
 
 body::-webkit-scrollbar {
@@ -27,17 +28,27 @@ body::-webkit-scrollbar {
     z-index: 2;
 }
 
+
 .nav p {
     position: relative;
-    color: #46317b;
+    color: var(--sigTextPrimary);
     z-index: 2;
     margin-left: 1vw;
-    
+    text-transform: uppercase;
+}
+
+.nav p > a {
+    text-decoration: none;
+    color: var(--sigTextPrimary);
+}
+
+.nav p > a:hover {
+    text-decoration: underline;
 }
 
 /* Clamp the size to ensure fs is in a certain rage depending on width */
 .nav-item {
-    color: #46317b;
+    color: var(--sigTextPrimary);
     font-size: clamp(3rem, 8vw, 8rem);
     display: block;
     text-decoration: none;
@@ -121,7 +132,7 @@ body::-webkit-scrollbar {
 }
 
 .nav[data-active-index = "99"] .nav-item {
-    color: #46317b;
+    color: var(--sigTextPrimary);
 }
 
 .nav[data-active-index = "99"] > .nav-background-pattern {
@@ -138,15 +149,17 @@ body::-webkit-scrollbar {
     flex-direction: column;
     gap: .2rem;
     text-align: center;
-    color: #46317b;
-    margin-top: 3rem;
+    color: var(--sigTextPrimary);
+    margin-top: 30rem;
     z-index: 2;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    background-color: #150f26;
+    top: -.5px;
 }
 
+
 .nav-credit-btn svg {
-    fill: #46317b;
+    fill: var(--sigTextPrimary);
 }
 
 .nav-credit-item svg:hover {
@@ -154,3 +167,14 @@ body::-webkit-scrollbar {
     opacity: .8;
 }
 
+
+
+.password-generator-card {
+    width: 550px;
+    background: rgba(255, 255, 255, .9);
+    padding: 40px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    
+}
