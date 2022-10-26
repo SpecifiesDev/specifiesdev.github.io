@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,400&display=swap');
+
+@import url("reset.css");
+@import url("root.css");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: 	#000000;
+    margin: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.nav {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.nav-items {
+    position: relative;
+    margin-left: 20vw;
+    z-index: 2;
+}
+
+.nav p {
+    position: relative;
+    color: #46317b;
+    z-index: 2;
+    margin-left: 1vw;
+    
+}
+
+/* Clamp the size to ensure fs is in a certain rage depending on width */
+.nav-item {
+    color: #46317b;
+    font-size: clamp(3rem, 8vw, 8rem);
+    display: block;
+    text-decoration: none;
+    padding: clamp(.25rem, .5vw, 1rem);
+
+    transition: color 800ms ease;
+}
+
+
+
+.nav-items:hover > .nav-item {
+    opacity: .3;
+}
+
+.nav-items:hover > .nav-item:hover {
+    opacity: 1;
+}
+
+.nav-background-pattern {
+    height: 100vh;
+    width: 100vw;
+
+    background-image: radial-gradient(
+        rgba(255, 255, 255, .1) 9%,
+        transparent 9%
+    );
+
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 500ms ease;
+}
+
+.nav-items:hover ~ .nav-background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: .5;
+}
+
+.nav[data-active-index = "0"] > .nav-background-pattern {
+    background-position: 0% -25%;
+    background-image: radial-gradient(
+        rgba(255, 255, 255, .3) 9%,
+        transparent 9%
+    );
+}
+
+.nav[data-active-index = "1"] > .nav-background-pattern {
+    background-position: 0% -50%;
+    background-image: radial-gradient(
+        rgba(255, 255, 255, .5) 9%,
+        transparent 9%
+    );
+}
+
+.nav[data-active-index = "2"] > .nav-background-pattern {
+    background-position: 0% -75%;
+    background-image: radial-gradient(
+        rgba(255, 255, 255, .7) 9%,
+        transparent 9%
+    );
+}
+
+
+
+.nav[data-active-index = "0"] .nav-items ~ .nav-item {
+    color: #3a2b5f;
+}
+
+.nav[data-active-index = "1"] .nav-items ~ .nav-item {
+    color: #271c48;
+}
+
+.nav[data-active-index = "2"] .nav-items ~ .nav-item {
+    color: #150f26;
+}
+
+.nav[data-active-index = "99"] .nav-item {
+    color: #46317b;
+}
+
+.nav[data-active-index = "99"] > .nav-background-pattern {
+    background-position: 0% 0%;
+    background-image: radial-gradient(
+        rgba(255, 255, 255, .1) 9%,
+        transparent 9%
+    )
+}
+
+.nav-credit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    text-align: center;
+    color: #46317b;
+    margin-top: 3rem;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-credit-btn svg {
+    fill: #46317b;
+}
+
+.nav-credit-item svg:hover {
+    scale: 130%;
+    opacity: .8;
+}
+
