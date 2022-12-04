@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel = "stylesheet" href = "./assets/sheets/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div id = "particle-div"></div>
+
+    <div class="main-page-container">
+
+        <img src = "./assets/imgs/starfarming.png">
+
+        <h1>StarFarming</h1>
+        <h5>v1.0.0</h5>
+        <p>The purpose of this page is to inform users of new features added in each StarFarming update until I take the time to make a complete wikipedia.</p>
+
+        <span>Made by csdad AKA SpecifiesDev</span>
+    </div>
+
+    <div class="fluency main-page-container overall">
+
+        <h1>Features</h1>
+        <h5>What's new in this version? Well considering this is the first version, there's quite a lot I have implemented.</h5>
+        <table class="fluency-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Usage</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Crop</b></td>
+                    <td>Configuration</td>
+                    <td>Users can add pretty much any crop in the game they want in this version. Crops have customizable growth times, experience values, random drop rates, sell prices, and more. The config.yml is robust is easy to understand. At the end of this page will have a youtube link pointing to a full setup guide.</td>
+                </tr>
+                <tr>
+                    <td><b>Scoreboard</b></td>
+                    <td>In-Game</td>
+                    <td>If you toggle the scoreboard setting in the config.yml spigot will show a robust scoreboard with information on what season it is, time until the next season, level progress, and the amount of starcoins a player has.</td>
+                </tr>
+                <tr>
+                    <td><b>Advanced Crop Deletion</b></td>
+                    <td>Backend</td>
+                    <td>The plugin actively works to try and prevent crops from being destroyed while at the same time ensuring a crop is removed from the stack if it is somehow destroyed to prevent lag.</td>
+                </tr>
+                <tr>
+                    <td><b>Levels Config & /levels</b></td>
+                    <td>Command & Configuration</td>
+                    <td>You can set custom level rates in the config that will exponentially scale using my <a target = "_blank" href = "https://docs.google.com/document/d/1CX7ko_hT45Cvky13MXHraqfXEPvXixGLz9PLNGVBZS0/edit?usp=sharing">formula</a>. Players can then use /levels in game and see the progress needed up to level 10.</td>
+                </tr>
+                <tr>
+                    <td><b>Levels</b></td>
+                    <td>Backend</td>
+                    <td>Whenever a player harvests a crop they receive a configured amount of experience. In later versions levels are going to unlock starred drops (more valuable crops), custom items, and machines.</td>
+                </tr>
+                <tr>
+                    <td><b>Holograms</b></td>
+                    <td>Feature</td>
+                    <td>The plugin is dependent on HolographicDisplays. It will NOT work without this plugin. I'm going to add hologram toggling in future versions, but for now they are a requirement.</td>
+                </tr>
+                <tr>
+                    <td><b>/sellall</b></td>
+                    <td>Command</td>
+                    <td>Whenever a player gets ready to sell their produce, they can run this command. They place anything they want to sell in the inventory. If the item can be sold, they are given the StarCoins, if not it will be returned to their inventory.</td>
+                </tr>
+                <tr>
+                    <td><b>StarCoins</b></td>
+                    <td>Currency</td>
+                    <td>StarCoins are the currency of the game. They are used to buy items from the shop, and can be used to buy machines, and other things in the future.</td>
+                </tr>
+                <tr>
+                    <td><b>Crop Obtaining</b></td>
+                    <td>Feature</td>
+                    <td>The only way for players to actually get crop seeds is to break grass blocks. You set the chance to receive the seed in the configuration. I did it this way to sort of give that "rarity" feeling like stardew does with certain crops.</td>
+                </tr>
+                <tr>
+                    <td><b>Seasons</b></td>
+                    <td>Feature</td>
+                    <td>Seasons are a big part of the plugin. They determine when crops can and will not grow. If the player plants the crop too late it will welter. In future version I'm going to add a gui where players can pull up crop information like growth time and seasons.</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="fluency main-page-container commands">
+
+        <h1>Commands</h1>
+        <h5>An in-depth look at the commands added.</h5>
+        <table class="fluency-table">
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Permissions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>/giveseed</b>
+                        /giveseed [player] [seed_name]
+                    </td>
+                    <td>
+                        Used to give a seed to a target player. The seed id's are defined by the "name" config value. So for example, sweet_potato's name is "&6Sweet Potato". In order to give myself the seed I'd execute <b>/giveseed csdad Sweet_Potato</b>
+                    </td>
+                    <td>betterfarming.giveseed - Blanket Permission allowing anyone with it to run the command.</td>
+                </tr>
+                <tr>
+                    <td><b>/levels</b></td>
+                    <td>Opens a GUI display the player's progress up to level 10. Also outlines xp required for each level.</td>
+                    <td>None. This isn't an operator command.</td>
+                </tr>
+                <tr>
+                    <td><b>/sellall</b></td>
+                    <td>Opens a GUI where a player can put their produce into sell.</td>
+                    <td>None. This isn't an operator command.</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="main-page-container connect">
+
+
+        <h1>Get Connected</h1>
+        <h5>Are you interested in following this resource as I work on it?</h5>
+        <p>I post daily updates on my progress, alongside sneak peaks, and take user suggestions in our discord. Simply click the icon at the bottom of this page to join.</p>
+
+        <h5>Other Contacts</h5>
+        <p>Don't want to join the discord? Contact me directly @ Austin#9949</p>
+        <p>Any other inquiries can be sent to @ specifiesdev@gmail.com</p>
+
+        <span>Thanks,<span>
+        <br>
+        <span>Austin</span>
+
+
+    </div>
+
+
+
+
+    <div class="main-page-socials-header" id = "socials">
+        © SpecifiesDev, 2022
+    </div>
+
+    <div class="main-page-socials">
+
+        <div class="main-page-socials">
+            <div class="main-page-socials-btn">
+                <a href = "https://github.com/SpecifiesDev/" target = "_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-page-socials-btn">
+            <a href = "https://discord.gg/jAx5zvWUWA" target = "_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-discord" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <circle cx="9" cy="12" r="1"></circle>
+                    <circle cx="15" cy="12" r="1"></circle>
+                    <path d="M7.5 7.5c3.5 -1 5.5 -1 9 0"></path>
+                    <path d="M7 16.5c3.5 1 6.5 1 10 0"></path>
+                    <path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-1 2.5"></path>
+                    <path d="M8.5 17c0 1 -1.356 3 -1.832 3c-1.429 0 -2.698 -1.667 -3.333 -3c-.635 -1.667 -.476 -5.833 1.428 -11.5c1.388 -1.015 2.782 -1.34 4.237 -1.5l1 2.5"></path>
+                 </svg>
+            </a>
+        </div>
+
+        
+    </div>
+    
+    <script src = "assets/scripts/particles.js"></script>
+    <script src = "assets/scripts/app.js"></script>
+    <script src = "assets/scripts/pageHeight.js"></script>
+</body>
+</html>
